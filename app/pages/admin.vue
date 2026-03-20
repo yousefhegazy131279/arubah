@@ -1,4 +1,7 @@
 <script setup>
+definePageMeta({
+  middleware: 'auth'
+})
 import { onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 
@@ -7,7 +10,7 @@ const router = useRouter()
 onMounted(async () => {
   try {
     // نعمل طلب للسيرفر للتأكد من الجلسة
-    const res = await $fetch('http://localhost/arubah_api/check-session.php')
+    const res = await $fetch('http://localhost/arooba/public/api')
 
     if (!res.success) {
       // لو مفيش session → نروح لصفحة login

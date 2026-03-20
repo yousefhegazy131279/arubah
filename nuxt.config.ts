@@ -1,6 +1,6 @@
 // nuxt.config.ts
 export default defineNuxtConfig({
-  modules: ['@nuxt/content'],
+  modules: ['@pinia/nuxt'],
   pages: true,
   app: {
     head: {
